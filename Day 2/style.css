@@ -1,0 +1,140 @@
+/* reset and common code starts here */
+:root{
+    --primary-color: rgb(11, 181, 48);
+    --secondary-color: rgba(36, 122, 55, 0.9);
+    --margin: 1.2rem;
+    --padding: 0.5rem;
+    --border-redius: 0.6rem;
+    --transition: all 0.3s;
+    --box-shadow: 0.1rem 0.2rem 0.8rem rgba(205, 202, 202, 0.5);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    outline: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+img{
+    width: 100%;   
+    height: auto; 
+}
+.flex-space-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn{
+    padding: var(--padding);
+    border: none;
+    /* border-radius: var(--border-redius); */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btn:hover{
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+/* reset and common code ends here */
+
+/* navbar style starts here */
+#menu-icon{
+    display: none;
+}
+nav{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.upper-nav{
+    background-color: var(--primary-color);
+    min-height: 10vh;
+    padding: var(--padding);
+}
+.nav__list{
+    transition: var(--transition);
+    
+}
+.nav__list:hover{
+    text-decoration: overline;
+    color: black;
+    
+}
+.nav__link{
+    color: #fff;
+    transition: var(--transition);
+}
+.nav__link:hover{
+    color: black;
+}
+.profile-icon{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #ffff;
+    filter: saturate(0);
+    transition: var(--transition);
+}
+.profile-icon:hover{
+    filter: saturate(1);
+}
+
+.lower-nav{
+    background-color: var(--secondary-color);
+    min-height: 10vh;
+    padding: var(--padding);
+}
+.nav__brand{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+/* navbar style ends here */
+
+/* Footer style starts here */
+.footer{
+    background-color: var(--primary-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 10vh;
+    padding: var(--padding);
+    font-size: 1rem;
+    color: #fff;
+}
+.footer__input{
+    padding: var(--padding);
+    border: none;
+    width: 20rem;
+}
+.btn-subscribe{
+    margin-left: -5px;
+}
+/* Footer style ends here */
+
+/* Responsiveness start here */
+@media (max-width:992px){
+    .flex-space-around{
+        flex-direction: column;
+        gap: 1rem;
+        padding:2rem;
+    }
+    #menu-icon{
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+        cursor: pointer;
+    }
+    .hidden{
+        display: none;
+    }
+}
+@media (max-width:768px){}
+@media (max-width:600px){}
+/* Responsiveness ends here */
